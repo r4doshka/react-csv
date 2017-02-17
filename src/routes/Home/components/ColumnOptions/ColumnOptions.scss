@@ -1,0 +1,111 @@
+.column-edit{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px;
+  background: #e1e1e1;
+  color: #a7a7a7;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  &:after{
+    content: '';
+    display: inline-block;
+    background: url('../../assets/arrow-down-grey.png') no-repeat;
+    width: 7px;
+    height: 6px;
+    margin: 2px 0 0 10px;
+  }
+  &.column-edit__active{
+    .dropdown-panel{
+      display:block;
+    }
+  }
+}
+
+.checkbox-list{
+  .checkbox-list__item {
+    margin: 0 0 10px 0;
+    font-size: 10px;
+    font-weight: 300;
+    color: #378bc7;
+    &:last-child{
+      margin:0;
+    }
+  }
+}
+
+.checkbox-group{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  input[type=checkbox]{
+    display: none;
+    &:checked + .checkbox-group__pseudo-checkbox{
+      &:before{
+        content:'';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: red;
+      }
+    }
+  }
+  .checkbox-group__pseudo-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px 0 0;
+    border: 1px solid #398bc7;
+  }
+  label{
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+.btn-blue{
+  background: #398bc7;
+  display: inline-block;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  &.btn-blue__block{
+    display: block;
+    width: 100%;
+  }
+  &:hover,
+  &:focus{
+    color: #fff;
+  }
+  &.btn-blue-fixed{
+        padding: 12px 17px 10px;
+  }
+}
+
+.dropdown-panel{
+  &.dropdown-panel__column-edit{
+    top: 39px;
+    left: 0;
+    right: 0;
+  }
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border: 1px solid #cce2f0;
+}

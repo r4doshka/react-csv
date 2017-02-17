@@ -1,0 +1,40 @@
+.search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  min-width: 340px;
+  display: flex;
+  background: #e1e1e1;
+  border: none;
+}
+
+.search-field {
+  width: 100%;
+  padding: 13px 15px;
+  background: #e1e1e1;
+  color: #8f8f8f;
+  border: none;
+  font-size: 12px;
+  line-height: 12px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-btn-wrap{
+  width:60px;
+}
+
+.search-btn {
+  background: url('../../assets/search-icon.png') no-repeat;
+  height: 18px;
+  width: 18px;
+}
+
+.btn-flat {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

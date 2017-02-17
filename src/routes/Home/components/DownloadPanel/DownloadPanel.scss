@@ -1,0 +1,14 @@
+.download-box{
+  position: relative;
+  margin: 0 0 0 22px;
+  &.download-box__active{
+    .dropdown-panel{
+      display: block;
+    }
+  }
+  .dropdown-panel__download{
+    width: 230px;
+    top: 38px;
+    left: inherit;
+  }
+}

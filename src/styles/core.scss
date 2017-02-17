@@ -12,10 +12,39 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.content{
+  padding: 10px 20px 0 0;
+}
+
+.flexbox{
+  display: flex;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.align-start{
+  align-items: flex-start;
+}
+
+.bold{
+  font-weight: 700;
 }

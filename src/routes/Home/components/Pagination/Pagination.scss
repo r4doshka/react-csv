@@ -1,0 +1,62 @@
+.paginations{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    .paginations-context{
+        border: none;
+        &:hover{
+            background: transparent;
+            a{
+                color: #388bc6;
+            }
+        }
+        a{
+            color: #388bc6;
+            &:hover{
+                color: #388bc6;
+            }
+        }
+    }
+    .paginations_current{
+        background: #388bc6;
+        border-color:#388bc6;
+        a{
+            color: #fff;
+        }
+    }
+    li{
+        display: inline;
+        margin: 0 5px 0 0;
+        padding: 0 6px;
+        border: 1px solid #e1e1e1;
+        cursor:pointer;
+        &:last-child{
+            margin: 0;
+        }
+        &:hover{
+            background: #388bc6;
+            border-color:#388bc6;
+            a{
+                color: #fff;
+            }
+        }
+    }
+    a{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #388bc6;
+        cursor:pointer;
+        &:hover,
+        &:focus,
+        &:active{
+            text-decoration: none;
+        }
+    }
+}
+
+.records-info{
+    margin: 0 15px 0 0;
+    font-size: 14px;
+    color: #388bc6;
+}

@@ -1,0 +1,206 @@
+.filter {
+  background: #e1e1e1;
+  .filter-header {
+    display: block;
+    margin: 0 0 16px 0;
+    padding: 0 0 12px 0;
+    color: #a7a7a7;
+    border-bottom: 2px solid #d7d7d7;
+    font-size: 14px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .filter-box-item{
+
+  }
+  .filter-item {
+    position: relative;
+    padding: 20px 18px;
+    border-bottom: 2px solid #d7d7d7;
+    color: #323232;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    &.filter-item__active{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #3fca94;
+        color: #fff;
+        font-weight: 400;
+        .filter-item__name {
+            &:before{
+                background: #fff;
+            }
+        }
+    }
+    &.filter-item__selected{
+        color: #3fca94;
+        font-weight: 400;
+        .filter-item__name {
+            &:before{
+                background: #3fca94;
+            }
+        }
+        &:after:hover{
+            background: red;
+        }
+    }
+  }
+  .filter-item__name {
+      display: inline-block;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 10px 0 0;
+      background: #a7a7a7;
+      border-radius: 50%;
+    }
+  }
+}
+
+.btn{
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.btn-green {
+  padding: 12px 17px 10px;
+  background: #3fca94;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+    &:hover {
+        color: #fff;
+    }
+    &:active:focus{
+        color: #fff;
+    }
+    &:focus{
+        color: #fff;
+    }
+    &:active{
+        color: #fff;
+    }
+}
+
+.btn-done{
+    font-size: 10px;
+    padding: 5px;
+    background: #fff;
+    color: #3fca94;
+    text-transform: uppercase;
+    box-shadow: none;
+
+    &:hover {
+        color: #3fca94;
+    }
+    &:active:focus{
+        color: #3fca94;
+    }
+    &:focus{
+         color: #3fca94;
+    }
+     &:active{
+        color: #3fca94;
+    }
+}
+
+ .btn-remove{
+    display: inline-block;
+    flex: 0 0 9px;
+    width: 9px;
+    height: 8px;
+    border: none;
+    background: url('../../assets/close-icon.png') no-repeat;
+    cursor:pointer;
+    padding: 0;
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.selected-list{
+    display: none;
+    flex-flow: row wrap;
+    position: absolute;
+    right: -140px;
+    top: -0;
+    width: 140px;
+    background: #3fca94;
+    color: #fff;
+     box-shadow: 2px 1px 2px rgba(123, 103, 103, 0.5);
+    .selected-list__item{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 13px 0 13px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        word-break: break-word;
+        &:last-child{
+            padding-bottom: 10px;
+        }
+    }
+    .selected-list-box{
+        flex: 0 0 100%;
+        &:after{
+            content:'';
+            display:block;
+            width: 80%;
+            margin: auto;
+            height: 1px;
+            background: #1eab74;
+        }
+        &:last-child{
+            &:after{
+                display:none;
+            }    
+        }
+    }
+}
+
+.eye-icon{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/eye-icon.png);
+    background-position-y: 49%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.show-selected{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right: 0;
+    width: 40px;
+    &.show-selected__opened{
+        box-shadow: 1px 1px 2px rgba(123, 103, 103, 0.5);
+        .selected-list {
+            display: flex;
+        }
+        .eye-icon {
+            background-image: url(../../assets/eye-icon-white.png);
+            background-color:  #3fca94
+        }
+    }
+}
