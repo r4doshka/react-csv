@@ -8,6 +8,7 @@ import ColumnOptions from '../ColumnOptions/ColumnOptions'
 import Pagination from '../Pagination/Pagination'
 import DownloadPanel from '../DownloadPanel/DownloadPanel'
 import TableData from '../TableData/TableData'
+import InfoBox from '../InfoBox/InfoBox'
 
 export const HomeView = (props) => (
  <div>
@@ -16,6 +17,7 @@ export const HomeView = (props) => (
       <TopMenu/>
       <Search/>
     </div>
+    <InfoBox/>
     <div className="row">
       <div className="col-md-3">
           <Filter/>

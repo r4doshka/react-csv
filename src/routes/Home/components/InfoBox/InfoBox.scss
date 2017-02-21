@@ -1,0 +1,37 @@
+.about-info{
+    padding: 32px 15px 24px 20px;
+    background: #ebf3f9;
+    .about-info__header{
+        margin: 0 0 28px 0;
+        color: #388bc6;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: left;
+    }
+}
+
+.info-box{
+    text-align: left;
+    &.info-box__address{
+        color: #161616;
+        font-size: 14px;
+        text-align: left;
+        p{
+            margin: 0;
+        }
+    }
+    .info-box__header{
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .info-box__description{
+        text-transform: uppercase;
+    }
+}
+
+.info-box-wrap{
+   .info-box:first-child{
+        margin: 0 0 20px; 
+    } 
+}

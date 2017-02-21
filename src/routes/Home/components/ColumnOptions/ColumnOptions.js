@@ -2,7 +2,7 @@ import React from 'react'
 import './ColumnOptions.scss'
 
 export const ColumnOptions = () => (
-  <div className="column-edit column-edit__active1">
+  <div className="column-edit column-edit__active">
     Edit Columns
     <div className="dropdown-panel dropdown-panel__column-edit">
     <div className="checkbox-list">

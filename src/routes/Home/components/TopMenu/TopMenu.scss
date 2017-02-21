@@ -9,7 +9,7 @@
     margin: 0 0 40px 0;
   }
   .top-menu__dropdown {
-    display: flex;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -48,6 +48,9 @@
       >.top-menu__item-link {
         color: #fff;
         font-weight: 400;
+      }
+       .top-menu__dropdown{
+        display: flex;
       }
     }
   }

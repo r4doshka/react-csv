@@ -20,10 +20,18 @@
   &:focus {
     outline: none;
   }
+  &.search-field__options-search{
+      padding: 8px 15px;
+      background: #fff;
+      color: #323232;
+  }
 }
 
 .search-btn-wrap{
   width:60px;
+  &.search-btn-wrap__white{
+    background: #fff;
+  }
 }
 
 .search-btn {

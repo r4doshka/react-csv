@@ -1,0 +1,26 @@
+.distance-slider{
+    .rc-slider-dot{
+        width: 1px;
+        height: 12px;
+        border: none;
+        bottom:-4px;
+        background: #c4c4c4;
+        margin: 0 !important;
+        &.rc-slider-dot-active{
+             background-color: #3fca94;
+        }
+    }
+    .rc-slider-rail{
+     background: #c4c4c4;
+    }
+    .rc-slider-track{
+        background-color: #3fca94;
+    }
+    .rc-slider-handle{
+        background-color: #3fca94;
+        border-color: #3fca94;
+        &:hover{
+             border-color: #3fca94;
+        }
+    }
+}

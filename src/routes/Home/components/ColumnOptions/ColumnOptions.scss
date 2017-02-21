@@ -37,6 +37,14 @@
       margin:0;
     }
   }
+  &.checkbox-list__simple{
+    .checkbox-list__item {
+      margin: 0 0 8px;
+      color: #323232;
+      font-size: 12px;
+      text-transform: none;
+    }    
+  }
 }
 
 .checkbox-group{
@@ -62,6 +70,7 @@
     align-items: center;
     width: 10px;
     height: 10px;
+    flex: 0 0 10px;
     margin: 0 8px 0 0;
     border: 1px solid #398bc7;
   }
@@ -71,6 +80,29 @@
     font-weight: inherit;
     color: inherit;
     cursor: pointer;
+  }
+  &.checkbox-group__white{
+      font-weight: 400;
+      input[type=checkbox]{
+      display: none;
+      &:checked + .checkbox-group__pseudo-checkbox{
+        &:before{
+          content:'';
+          display: block;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background:url(../../assets/cross-icon.png) no-repeat;
+        }
+      }
+    }
+    .checkbox-group__pseudo-checkbox{
+      flex: 0 0 15px;
+      width: 15px;
+      height: 15px;
+      background: #fff;
+      border: none;
+    }
   }
 }
 
@@ -96,6 +128,7 @@
 }
 
 .dropdown-panel{
+  background: #fff;
   &.dropdown-panel__column-edit{
     top: 39px;
     left: 0;

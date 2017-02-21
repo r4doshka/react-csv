@@ -1,22 +1,22 @@
 .filter {
   background: #e1e1e1;
+   .filter-header-box{
+      padding: 18px;
+  }
   .filter-header {
     display: block;
-    margin: 0 0 16px 0;
-    padding: 0 0 12px 0;
+    margin: 0 0 15px 0;
+    padding: 0 0 10px 0;
     color: #a7a7a7;
     border-bottom: 2px solid #d7d7d7;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 8px;
     text-transform: uppercase;
     text-align: center;
   }
-  .filter-box-item{
-
-  }
   .filter-item {
     position: relative;
-    padding: 20px 18px;
     border-bottom: 2px solid #d7d7d7;
     color: #323232;
     font-weight: 300;
@@ -25,16 +25,16 @@
     text-transform: uppercase;
     text-align: left;
     &.filter-item__active{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #3fca94;
+        .filter-item__name {
+              background: #3fca94;
         color: #fff;
         font-weight: 400;
-        .filter-item__name {
             &:before{
                 background: #fff;
             }
+        }
+        .btn-done{
+            display: block;
         }
     }
     &.filter-item__selected{
@@ -51,7 +51,8 @@
     }
   }
   .filter-item__name {
-      display: inline-block;
+      padding: 19px 18px;
+      position: relative;
     &:before {
       content: '';
       display: inline-block;
@@ -62,79 +63,6 @@
       border-radius: 50%;
     }
   }
-}
-
-.btn{
-    &:focus,
-    &:hover,
-    &:active,
-    &:active:focus{
-        outline: none;
-        box-shadow: none;
-    }
-}
-
-.btn-green {
-  padding: 12px 17px 10px;
-  background: #3fca94;
-  font-size: 11px;
-  line-height: 14px;
-  font-weight: 400;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-    &:hover {
-        color: #fff;
-    }
-    &:active:focus{
-        color: #fff;
-    }
-    &:focus{
-        color: #fff;
-    }
-    &:active{
-        color: #fff;
-    }
-}
-
-.btn-done{
-    font-size: 10px;
-    padding: 5px;
-    background: #fff;
-    color: #3fca94;
-    text-transform: uppercase;
-    box-shadow: none;
-
-    &:hover {
-        color: #3fca94;
-    }
-    &:active:focus{
-        color: #3fca94;
-    }
-    &:focus{
-         color: #3fca94;
-    }
-     &:active{
-        color: #3fca94;
-    }
-}
-
- .btn-remove{
-    display: inline-block;
-    flex: 0 0 9px;
-    width: 9px;
-    height: 8px;
-    border: none;
-    background: url('../../assets/close-icon.png') no-repeat;
-    cursor:pointer;
-    padding: 0;
-    &:focus,
-    &:hover,
-    &:active,
-    &:active:focus{
-        outline: none;
-        box-shadow: none;
-    }
 }
 
 .selected-list{
@@ -186,6 +114,9 @@
     background-position-x: 50%;
     background-repeat: no-repeat;
     cursor: pointer;
+    &.eye-icon__black{
+        background-image: url(../../assets/eye-icon-black.png);
+    }
 }
 .show-selected{
     position: absolute;
@@ -193,6 +124,9 @@
     bottom:0;
     right: 0;
     width: 40px;
+    &.show-selected__right{
+        right: -40px;
+    }
     &.show-selected__opened{
         box-shadow: 1px 1px 2px rgba(123, 103, 103, 0.5);
         .selected-list {
@@ -202,5 +136,202 @@
             background-image: url(../../assets/eye-icon-white.png);
             background-color:  #3fca94
         }
+    }
+}
+
+.option-box{
+    flex: 0 0 100%;
+    font-weight: 400;
+    background: #e1e1e1;
+    .option-box__header{
+        padding: 10px 18px;
+        border-bottom: 2px solid #fff;
+        background: #a2b9ca;
+        font-size: 14px;
+        letter-spacing: 8px;
+        color: #fff;
+    }
+    .option-box__body{
+        position: relative;
+        padding: 15px 40px 15px 18px;
+        background: #e1e1e1;
+    }
+    .option-box__title{
+        margin: 0 0 10px;
+        font-size: 12px;
+        color: #323232;
+        text-transform: capitalize;
+        .option-box__title-note{
+            color: #9a9a9a;
+        }
+    }
+    .option-box__search{
+        display: flex;
+    }
+    .option-box__context-name{
+        color: #323232;
+        margin: 0 0 5px;
+        font-size: 10px;
+    }
+    .option-box__context-note{
+        margin: 20px 0 0;
+        color: #323232;
+        font-size: 10px;
+            font-weight: 400;
+    }
+    .option-box__body-row{
+        margin: 0 0 30px 0;
+        &::last-child{
+            margin: 0;
+        }
+    }
+}
+
+.search-group{
+    position: relative;
+    .show-selected{
+        right: -40px;
+    }
+}
+
+.input-list{
+    margin: 0 0 10px;
+    .input-list__item{
+        flex: 0 0 48%;
+        margin: 0 0 7px;
+        &.input-list__item-short{
+            flex: 0 0 35%;
+            margin: 0 8px;
+            text-align: center;
+        }
+    }
+    .input-list__item-title{
+        font-size: 10px;
+    }
+    .input-list__field{
+        width: 100%;
+        height: 30px; 
+        padding: 0 0 0 5px;
+        border: none;
+    }
+    .input-list__note{
+        display: flex;
+        align-items: center;
+        padding: 7px 0 0 ;
+    }
+}
+
+
+.btn{
+    border-radius: 0;
+    white-space: inherit;
+    word-wrap: break-word;
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &.btn__block{
+        display: block;
+        width: 100%;
+    }
+    &.btn__indent{
+        margin: 17px 0 0;
+    }
+}
+
+.btn-green {
+  padding: 12px 17px 10px;
+  background: #3fca94;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+    &:hover {
+        color: #fff;
+    }
+    &:active:focus{
+        color: #fff;
+    }
+    &:focus{
+        color: #fff;
+    }
+    &:active{
+        color: #fff;
+    }
+}
+
+.btn-done{
+    display: none;
+    position: absolute;
+    right: 18px;
+    top: 14px;
+    font-size: 10px;
+    padding: 5px;
+    background: #fff;
+    color: #3fca94;
+    text-transform: uppercase;
+    box-shadow: none;
+
+    &:hover {
+        color: #3fca94;
+    }
+    &:active:focus{
+        color: #3fca94;
+    }
+    &:focus{
+         color: #3fca94;
+    }
+     &:active{
+        color: #3fca94;
+    }
+}
+
+ .btn-remove{
+    display: inline-block;
+    flex: 0 0 9px;
+    width: 9px;
+    height: 8px;
+    border: none;
+    background: url('../../assets/close-icon.png') no-repeat;
+    cursor:pointer;
+    padding: 0;
+    white-space: nowrap;
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &.brt-remove__black{
+        width: auto;
+        height: auto;
+        padding-left: 10px;
+        background: url('../../assets/remove-icon-black.png') no-repeat;
+        background-position-y: 5px;
+        font-size: 10px;
+        text-transform: lowercase;
+        font-weight: 300;
+    }
+}
+
+.btn-add{
+    width: 100%;
+    padding: 14px 0;
+    border: 1px solid #fff;
+    background: #e1e1e1;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:focus,
+    &:hover,
+    &:active,
+    &:active:focus{
+       color: #fff;
     }
 }

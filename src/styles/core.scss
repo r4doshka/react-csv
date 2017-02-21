@@ -29,6 +29,10 @@ body {
   display: flex;
 }
 
+.flexflow-wrap{
+  flex-flow:row wrap;
+}
+
 .align-center{
   align-items: center;
 }

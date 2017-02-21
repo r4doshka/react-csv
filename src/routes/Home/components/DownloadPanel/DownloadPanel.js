@@ -2,7 +2,7 @@ import React from 'react'
 import './DownloadPanel.scss'
 
 export const DownloadPanel = () => (
-  <div className="download-box download-box__active1">
+  <div className="download-box download-box__active">
     <button className="btn btn-green">
       Download
     </button>
